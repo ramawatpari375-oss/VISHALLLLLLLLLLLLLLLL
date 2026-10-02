@@ -1,0 +1,573 @@
+<link rel="stylesheet" href="style.css">
+<audio id="bgMusic" loop>
+  <source src="https://www.image2url.com/r2/default/audio/1790938285067-3afad702-7bf3-4d3e-81c0-978dd2120d03.mp3" type="audio/mpeg">
+</audio>
+
+<div class="screen" id="passwordScreen">
+
+  <div class="doodle heart-doodle">♡</div>
+  <div class="doodle star star1">✦</div>
+  <div class="doodle star star2">✧</div>
+
+  <div class="paper-card">
+
+    <div class="tape"></div>
+
+    <p class="tiny">A LITTLE SOMETHING FOR YOU</p>
+
+    <h1>Hey Vishal...</h1>
+
+    <p class="question">
+      This little world is only<br>
+      meant for you ♡
+    </p>
+
+    <div class="lock-circle">🔐</div>
+
+    <p class="enter-text">enter the secret password</p>
+
+    <input
+      type="password"
+      id="passwordInput"
+      placeholder="your secret..."
+    >
+
+    <button onclick="checkPassword()">
+      UNLOCK MY SURPRISE ♡
+    </button>
+
+<div class="wrong-reaction" id="wrongReaction">
+  <span class="sad-face">☹︎</span>
+  <span id="wrongMessage"></span>
+</div>
+
+    <div class="bottom-note">made with love, by Pari ♡</div>
+
+  </div>
+
+</div>
+
+
+<div class="screen hidden" id="welcomeScreen">
+
+  <div class="paper-card welcome-card">
+
+    <p class="tiny">YOU'RE IN ♡</p>
+
+    <h1>I made something<br>for you, Vishal</h1>
+
+    <div class="little-heart">♥</div>
+
+    <p class="question">
+      A tiny little world<br>
+      made by your Pari.
+    </p>
+
+    <button onclick="openSurprise()">
+      CLICK TO OPEN ♡
+    </button>
+
+  </div>
+
+</div>
+
+
+<div class="screen hidden" id="boyfriendScreen">
+  <div class="scrap-tape tape-left"></div>
+<div class="scrap-tape tape-right"></div>
+
+  <p>Happy Boyfriend Day</p>
+
+  <h1>Vishal ♡</h1>
+  <button class="continue-btn" onclick="openOfficialDay()">
+  TAP TO CONTINUE ♡
+</button>
+
+</div>
+<div class="screen hidden" id="officialScreen">
+
+  <div class="official-card">
+
+    <p class="tiny">A DAY I'LL ALWAYS REMEMBER ♡</p>
+
+    <h1>The day we<br>became official</h1>
+
+    <div class="calendar">
+
+      <div class="calendar-top">
+        MAY
+      </div>
+
+      <div class="calendar-year">
+        2026
+      </div>
+
+      <div class="calendar-grid">
+        <span>M</span>
+        <span>T</span>
+        <span>W</span>
+        <span>T</span>
+        <span>F</span>
+        <span>S</span>
+        <span>S</span>
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <span class="special-date">1♡</span>
+
+        <span>2</span>
+        <span>3</span>
+      </div>
+
+    </div>
+
+    <p class="date-note">
+      01 • 05 • 2026
+    </p>
+
+        <p class="little-note">
+      and somehow, that one day<br>
+      became one of my favourite memories ♡
+    </p>
+
+    <button class="continue-btn" onclick="goToPhotos()">
+      NEXT ♡
+    </button>
+
+  </div>
+
+</div>
+<!-- ================= PHOTOS ================= -->
+
+<div class="screen hidden" id="photosScreen">
+
+  <div class="photos-page">
+
+    <p class="tiny">LITTLE MEMORIES OF US ♡</p>
+
+    <h1>Little moments,<br>
+      <span>big memories</span>
+    </h1>
+
+    <p class="photos-subtitle">
+      a few little pieces of us that I want to keep forever
+    </p>
+
+    <div class="photo-grid">
+
+      <div class="memory-photo photo1">
+  <img src="https://i.ibb.co/SXmGpk7z/819636657-1620712513132354-2979507422408348252-n.png">
+</div>
+
+<div class="memory-photo photo2">
+  <img src="https://i.ibb.co/Df3PyK5f/820113906-2186118535278187-4765892983546875718-n.png">
+</div>
+
+<div class="memory-photo photo3">
+  <img src="https://i.ibb.co/jkjR2D9J/821388368-1588863102452711-4606672207796584812-n.png">
+</div>
+
+<div class="memory-photo photo4">
+  <img src="https://i.ibb.co/M5ZkGfwb/821728476-1123651093439787-4885498315465334008-n.png">
+</div>
+
+    </div>
+
+    <button class="continue-btn" onclick="goToLetter()">
+      NEXT ♡
+    </button>
+
+  </div>
+
+</div>
+<!-- ================= LETTER SCREEN ================= -->
+
+<div class="screen hidden" id="letterScreen">
+
+  <div class="letter-page">
+
+    <p class="tiny">A LITTLE SOMETHING FOR YOU ♡</p>
+
+    <h1>A little letter<br>
+      <span>for you, Vishal</span>
+    </h1>
+
+    <div class="envelope-wrap">
+
+      <div class="envelope">
+
+        <div class="envelope-flap"></div>
+
+        <div class="envelope-front">
+          <div class="heart-seal">♡</div>
+          <p>For Vishal</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="letter-hint">
+      there's a little piece of my heart inside ♡
+    </p>
+
+    <button class="continue-btn" onclick="openLetter()">
+      CLICK TO OPEN ♡
+    </button>
+
+  </div>
+
+</div>
+<!-- ================= INSIDE LETTER ================= -->
+
+<div class="screen hidden" id="insideLetter">
+
+  <div class="inside-letter-page">
+
+    <p class="tiny">A FEW WORDS FROM ME ♡</p>
+
+    <h1>For you, <span>Vishal</span></h1>
+
+    <div class="letter-content">
+
+      <div class="letter-photo">
+        <img src="https://i.ibb.co/SXmGpk7z/819636657-1620712513132354-2979507422408348252-n.png">
+        <p>one of my favourite memories ♡</p>
+      </div>
+
+      <div class="letter-paper">
+
+        <div class="letter-paper-tape"></div>
+
+        <p id="typedLetter"></p>
+
+      </div>
+
+    </div>
+
+    <button class="continue-btn" onclick="openCherish()">
+      NEXT ♡
+    </button>
+
+  </div>
+
+</div>
+<!-- ================= CHERISH SCREEN ================= -->
+
+<div class="screen hidden" id="cherishScreen">
+
+  <div class="cherish-page">
+
+    <p class="tiny">A FEW THINGS I DREAM OF ♡</p>
+
+    <h1>The things I want<br>
+      <span>to cherish with u</span>
+    </h1>
+
+    <p class="cherish-subtitle">
+      little things I want to experience with you
+    </p>
+
+    <div class="cherish-cards">
+
+      <!-- CARD 1 -->
+      <div class="cherish-card" onclick="openCherishCard(this)">
+        <div class="card-inner">
+
+          <div class="card-front">
+            <span>01</span>
+            <h2>🌍 Travel Together</h2>
+            <p>click me ♡</p>
+          </div>
+
+          <div class="card-back">
+            <h2>Travel together</h2>
+            <p>new places, new memories.</p>
+            <div class="back-heart">♡</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="cherish-card" onclick="openCherishCard(this)">
+        <div class="card-inner">
+
+          <div class="card-front">
+            <span>02</span>
+            <h2>🌙 Late Night Outs</h2>
+            <p>click me ♡</p>
+          </div>
+
+          <div class="card-back">
+            <h2>Late night outs</h2>
+            <p>random plans & coming home with a thousand stories.</p>
+            <div class="back-heart">♡</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="cherish-card" onclick="openCherishCard(this)">
+        <div class="card-inner">
+
+          <div class="card-front">
+            <span>03</span>
+            <h2>🎬 Movie Nights</h2>
+            <p>click me ♡</p>
+          </div>
+
+          <div class="card-back">
+            <h2>Movie nights</h2>
+            <p>just us, snacks & a movie.</p>
+            <div class="back-heart">♡</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="cherish-card" onclick="openCherishCard(this)">
+        <div class="card-inner">
+
+          <div class="card-front">
+            <span>04</span>
+            <h2>☕ Random Dates</h2>
+            <p>click me ♡</p>
+          </div>
+
+          <div class="card-back">
+            <h2>Random dates</h2>
+            <p>the ones we don't plan.</p>
+            <div class="back-heart">♡</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="cherish-card" onclick="openCherishCard(this)">
+        <div class="card-inner">
+
+          <div class="card-front">
+            <span>05</span>
+            <h2>📸 More Photos</h2>
+            <p>click me ♡</p>
+          </div>
+
+          <div class="card-back">
+            <h2>More photos</h2>
+            <p>because I want way too many memories with you.</p>
+            <div class="back-heart">♡</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="cherish-card" onclick="openCherishCard(this)">
+        <div class="card-inner">
+
+          <div class="card-front">
+            <span>06</span>
+            <h2>🌃 City At Night</h2>
+            <p>click me ♡</p>
+          </div>
+
+          <div class="card-back">
+            <h2>City at night</h2>
+            <p>doing absolutely nothing, but together.</p>
+            <div class="back-heart">♡</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button id="cherishNextButton" onclick="openMoments()">
+    NEXT ♡
+  </button>
+
+</div>
+<!-- ================= OUR LITTLE CINEMA ================= -->
+
+<div class="screen hidden" id="momentsScreen">
+
+  <div class="moments-page">
+
+    <p class="tiny">A LITTLE MOVIE OF US ♡</p>
+
+    <h1>Some moments <span>I'll always keep</span></h1>
+
+    <p class="moments-subtitle">
+      little pieces of us, playing like a tiny movie
+    </p>
+
+    <div class="film-window">
+
+      <div class="film-track">
+
+        <!-- ORIGINAL 4 VIDEOS -->
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/tg3ei9wb5l9bnv9nxu18w/VID_20260926_120516_918.mp4?rlkey=k8io6z63uq9up9uqj7qaktbwv&st=on3uepz7&raw=1">
+          </video>
+        </div>
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/ol55usk8ocxe6vctjh2fc/VID_20260927_004956.mp4?rlkey=m1l9bquvja1vg5krh10pjxmiq&st=v7vppb1l&raw=1">
+          </video>
+        </div>
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/r1aw5ttwhvhdcad85xwdz/VID_20260927_005024.mp4?rlkey=lstoke0xcwbpjo5pb8vngxz4e&st=9nnmpooz&raw=1">
+          </video>
+        </div>
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/oebmvwzrn90usa95rtuci/VID_20260727_124405.mp4?rlkey=amckv5ih7up4abf1wj4c9juxa&st=tn66dzuv&raw=1">
+          </video>
+        </div>
+
+
+        <!-- DUPLICATE 4 = SEAMLESS LOOP -->
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/tg3ei9wb5l9bnv9nxu18w/VID_20260926_120516_918.mp4?rlkey=k8io6z63uq9up9uqj7qaktbwv&st=on3uepz7&raw=1">
+          </video>
+        </div>
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/ol55usk8ocxe6vctjh2fc/VID_20260927_004956.mp4?rlkey=m1l9bquvja1vg5krh10pjxmiq&st=v7vppb1l&raw=1">
+          </video>
+        </div>
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/r1aw5ttwhvhdcad85xwdz/VID_20260927_005024.mp4?rlkey=lstoke0xcwbpjo5pb8vngxz4e&st=9nnmpooz&raw=1">
+          </video>
+        </div>
+
+        <div class="film-frame">
+          <video autoplay muted playsinline loop>
+            <source src="https://www.dropbox.com/scl/fi/oebmvwzrn90usa95rtuci/VID_20260727_124405.mp4?rlkey=amckv5ih7up4abf1wj4c9juxa&st=tn66dzuv&raw=1">
+          </video>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="movie-note">
+      ✦ little moments, big memories ✦
+    </div>
+
+    <p class="film-caption">
+      a few seconds of us that I wish could last forever ♡
+    </p>
+
+  </div>
+
+  <button id="momentsNextButton" onclick="openFuturePlans()">NEXT ♡</button>
+
+</div>
+<div class="screen hidden" id="futureScreen">
+
+  <div class="future-page">
+
+    <p class="tiny">A LITTLE BUCKET LIST ♡</p>
+
+    <h1>Our future <span>plans</span></h1>
+
+    <p class="future-subtitle">
+      things I want to do, experience & remember with you
+    </p>
+
+    <div class="bucket-board">
+
+      <div class="bucket-note note1">
+        <span>01</span>
+        <h2>✈️ One trip together</h2>
+        <p>somewhere new, just us.</p>
+      </div>
+
+      <div class="bucket-note note2">
+        <span>02</span>
+        <h2>🌙 One perfect date</h2>
+        <p>the kind we'll talk about forever.</p>
+      </div>
+
+      <div class="bucket-note note3">
+        <span>03</span>
+        <h2>🌃 One late night adventure</h2>
+        <p>random plans & no idea where we'll end up.</p>
+      </div>
+
+      <div class="bucket-note note4">
+        <span>04</span>
+        <h2>📸 A ridiculous number of photos</h2>
+        <p>because apparently one hundred is never enough.</p>
+      </div>
+
+      <div class="bucket-note note5">
+        <span>05</span>
+        <h2>♡ Make a memory</h2>
+        <p>one we'll talk about years from now.</p>
+      </div>
+
+    </div>
+
+    <div class="continued">
+      <div class="continued-line"></div>
+      <p>to be continued.....</p>
+      <span>because obviously, our story doesn't end here ♡</span>
+    </div>
+
+  </div>
+<button id="futureNextButton" onclick="openFinalSurprise()">
+    NEXT ♡
+  </button>
+
+</div>
+<div class="screen hidden" id="finalScreen">
+
+  <div class="final-content">
+
+    <p class="final-line line1">And after everything...</p>
+
+    <p class="final-line line2">after every little memory,</p>
+
+    <p class="final-line line3">every laugh, every conversation,</p>
+
+    <p class="final-line line4">and everything still waiting for us...</p>
+
+    <h1 class="choose-line">I still choose u. ♡</h1>
+
+    <div class="final-sign">
+      <p>Happy Boyfriend Day, Vishal ♡</p>
+      <span>Love, Pari</span>
+    </div>
+
+  </div>
+
+  <button id="replayButton" onclick="replayStory()">
+    ↻ REPLAY OUR STORY
+  </button>
+
+</div>
+
+
+<script src="script.js"></script>
